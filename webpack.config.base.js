@@ -41,12 +41,6 @@ module.exports = {
     open: true, // open the default browser
     hot: true,
     historyApiFallback: true, // serve index.html instead of routes leading to no specific ressource
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        pathRewrite: { '^/api': '' },
-      },
-    },
   },
   module: {
     rules: [
