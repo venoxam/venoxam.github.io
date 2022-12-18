@@ -12,9 +12,9 @@ class SellerLibrary {
         },
       };
       // eslint-disable-next-line prefer-template
-      // const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getAllBySeller/` + idSeller,options);
+      // const reponse = await fetch(`${process.env.API_BASE_URL}/products/getAllBySeller/` + idSeller,options);
       // eslint-disable-next-line prefer-template
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getAllBySeller/` + idSeller, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/products/getAllBySeller/` + idSeller, options);
       console.log(reponse, 'reponse du fetch')
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -46,7 +46,7 @@ class SellerLibrary {
 
       // eslint-disable-next-line prefer-template
       const reponse = await fetch(
-        `${process.env.API_BASE_URL}/api/products/countAllBySeller`,
+        `${process.env.API_BASE_URL}/products/countAllBySeller`,
         options,
       );
       if (!reponse.ok) {
@@ -76,9 +76,9 @@ class SellerLibrary {
       };
   
       // eslint-disable-next-line prefer-template
-      // const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/getStore/` + id, options);
+      // const reponse = await fetch(`${process.env.API_BASE_URL}/users/getStore/` + id, options);
       // eslint-disable-next-line prefer-template
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/getStore/` + id, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/users/getStore/` + id, options);
   
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);

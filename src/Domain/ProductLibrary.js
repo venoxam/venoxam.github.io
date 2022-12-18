@@ -21,7 +21,7 @@ class ProductLibrary {
         },
       };
 
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getAll`, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/products/getAll`, options);
 
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -45,7 +45,7 @@ class ProductLibrary {
         },
       };
 
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/selectLastProduct`, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/products/selectLastProduct`, options);
 
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -118,7 +118,7 @@ class ProductLibrary {
           },
         };
 
-        const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/add`, options);
+        const reponse = await fetch(`${process.env.API_BASE_URL}/products/add`, options);
 
         if (!reponse.ok) {
           throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -144,8 +144,8 @@ class ProductLibrary {
         },
       };
 
-      // category = await fetch('${process.env.API_BASE_URL}/api/categories/getAllCategories', options);
-      category = await fetch(`${process.env.API_BASE_URL}/api/categories/getAllCategories`, options);
+      // category = await fetch('${process.env.API_BASE_URL}/categories/getAllCategories', options);
+      category = await fetch(`${process.env.API_BASE_URL}/categories/getAllCategories`, options);
 
       if (!category.ok) {
         throw new Error(`fetch error : ${category.status}${category.statusText}`);
@@ -188,7 +188,7 @@ class ProductLibrary {
           };
           console.log(JSON.stringify(data));
           // eslint-disable-next-line prefer-template
-          const results = await fetch(`${process.env.API_BASE_URL}/api/products/search/` + data, options);
+          const results = await fetch(`${process.env.API_BASE_URL}/products/search/` + data, options);
           const products = await results.json();
           console.log(products);
 
@@ -388,9 +388,9 @@ class ProductLibrary {
         },
       };
   
-      /// const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getAllBySeller/` + id, options);
+      /// const reponse = await fetch(`${process.env.API_BASE_URL}/products/getAllBySeller/` + id, options);
       // eslint-disable-next-line prefer-template
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getAllBySeller/` + id, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/products/getAllBySeller/` + id, options);
   
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -416,10 +416,10 @@ class ProductLibrary {
         },
       };
       console.log('TEST ', id);
-      // const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getIdProduct/` + id, options);
+      // const reponse = await fetch(`${process.env.API_BASE_URL}/products/getIdProduct/` + id, options);
   
       // eslint-disable-next-line prefer-template
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getIdProduct/` + id, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/products/getIdProduct/` + id, options);
   
       product = await reponse.json();
       if (!reponse.ok) {
@@ -443,8 +443,8 @@ class ProductLibrary {
         },
       };
   
-      // const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/addReview`, options);
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/addReview`, options);
+      // const reponse = await fetch(`${process.env.API_BASE_URL}/products/addReview`, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/products/addReview`, options);
   
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -475,10 +475,10 @@ class ProductLibrary {
         },
       };
   
-      // const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getReviews/` + data, options);
+      // const reponse = await fetch(`${process.env.API_BASE_URL}/products/getReviews/` + data, options);
   
       // eslint-disable-next-line prefer-template
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getReviews/` + data, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/products/getReviews/` + data, options);
   
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);

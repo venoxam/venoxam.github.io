@@ -11,10 +11,10 @@ class CategoryLibrary {
         },
       };
 
-      // const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/listByCategory/` + id, options);
+      // const reponse = await fetch(`${process.env.API_BASE_URL}/products/listByCategory/` + id, options);
 
       // eslint-disable-next-line prefer-template
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/listByCategory/` + id, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/products/listByCategory/` + id, options);
 
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -38,10 +38,10 @@ class CategoryLibrary {
         },
       };
 
-      // const reponse = await fetch(`${process.env.API_BASE_URL}/api/products/getCategory/` + id, options);
+      // const reponse = await fetch(`${process.env.API_BASE_URL}/products/getCategory/` + id, options);
 
       // eslint-disable-next-line prefer-template
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/categories/getCategory/` + id, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/categories/getCategory/` + id, options);
 
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -64,7 +64,7 @@ class CategoryLibrary {
         },
       };
 
-      const reponse = await fetch(`${process.env.API_BASE_URL}/api/categories/getAllCategories`, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/categories/getAllCategories`, options);
 
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
