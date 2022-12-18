@@ -134,7 +134,7 @@ class UserLibrary {
         console.error("Passwords don't match");
       }
 
-      // Creation of a new json object
+      // Creation of a new json object.
       const newData = {
         lastname,
         firstname,
