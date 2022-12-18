@@ -8,28 +8,28 @@ const createOrder = (email) => {
      objects : items,
      email
   }
-  console.log("orders created");
+  
   let string = "orders";
     string+=email;
     localStorage.setItem(string,JSON.stringify(orders));
 };
 
 async function addOrder(){
-    console.log("Test d'ajout");
+    
     const user = await getAuthenticatedUser();
     const orders = await loadOrders(user.email)
     const cart = await loadCart(user.email);
     await orders.objects.push(cart.objects)
-    console.log("order added", cart)
+    
     saveOrder(orders);
 }
 
 function loadOrders(email) {
-    console.log("Test ordres chager");
+    
     let string = "orders";
     string+=email
     const orders = JSON.parse(localStorage.getItem(string));
-    console.log("les ordres sont chargés",orders);
+    
     return orders;
 }
 
@@ -38,9 +38,8 @@ function saveOrder(orders) {
   let string = "orders";
   string+=user.email;
   localStorage.setItem(string, JSON.stringify(orders));
+  // eslint-disable-next-line
   const ordersNew  = localStorage.getItem(string);
-  console.log("Le nouvel ordre est", ordersNew);
-
 }
 
 function deleteOrders(){

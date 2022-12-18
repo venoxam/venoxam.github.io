@@ -7,7 +7,7 @@ const shoppingCart = (email) => {
      objects : items,
      email
   }
-  console.log("Cart created");
+  
   createCart(cart,email);
 };
 
@@ -25,11 +25,11 @@ function saveCart(cart) {
   }
 
 function loadCart(emailUser) {
-    console.log("Lemial du user load cart est ", emailUser);
+    
     let string = "shoppingCart";
     string+=emailUser
   const cart = JSON.parse(localStorage.getItem(string));
-  console.log( "test",cart);
+  
   if(cart.email === emailUser){
   return cart;
 }
@@ -45,9 +45,9 @@ function deleteCart() {
 function addItemToCart(id, name, price, count) {
     const user = getAuthenticatedUser();
     if(user!==undefined){
-        console.log("email",user.email);
+        
      const cart = loadCart(user.email);
-     console.log("tentative d'ajout dans le cart", cart);
+     
     // eslint-disable-next-line no-restricted-syntax
         for (const item in cart.objects) {
             if (cart.objects[item].name === name) {
@@ -58,22 +58,22 @@ function addItemToCart(id, name, price, count) {
     }
     const itemToadd = new Item(id, name, price, count);
     cart.objects.push(itemToadd);
-    console.log(cart);
+    
     saveCart(cart);
     // eslint-disable-next-line no-console
-    console.log(cart);
+    
     // eslint-disable-next-line no-console
-    console.log("Ajout avec panier existant");
+    
     }else{
         Navigate("login");
     }
   };
 
   function removeItemFromCart(name){
-    console.log("l'objet a supprimer est : ", name);
+    
     const user = getAuthenticatedUser();
     const cart = loadCart(user.email);
-    console.log("cart avant remove ", cart)
+    
     // eslint-disable-next-line no-restricted-syntax
     for(const item in cart.objects) {
       if(cart.objects[item].name === name) {
@@ -81,8 +81,8 @@ function addItemToCart(id, name, price, count) {
         if(cart.objects[item].count === 0) {
           cart.objects.splice(item,1);
         }
-        console.log("Normaly Items has been removed");
-        console.log(cart);
+        
+        
         break;
       }
   }
@@ -96,7 +96,7 @@ function getCartTotal(){
     const {length} = cart.objects;
   for(let i=0; i<length; i+=1){
     sum += cart.objects[i].price * cart.objects[i].count; 
-    console.log(sum);
+    
 }
 return sum;
 }
@@ -110,7 +110,7 @@ function countProductCart(){
     // eslint-disable-next-line prefer-destructuring
      count += cart.objects[i].count;
   }
-  console.log("Le nomre de produits navbar " , count)
+  
   return count;
 
 }
