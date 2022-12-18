@@ -186,7 +186,6 @@ class ProductLibrary {
               'Content-Type': 'application/json',
             },
           };
-          );
           // eslint-disable-next-line prefer-template
           const results = await fetch(`${process.env.API_BASE_URL}/products/search/` + data, options);
           const products = await results.json();

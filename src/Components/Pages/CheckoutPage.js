@@ -110,8 +110,6 @@ const CheckoutPage = () => {
     clearPage();
     const userEmail = getAuthenticatedUser().email;
     const cart = loadCart(userEmail);
-    const total = getCartTotal();
-    
 
     let html2 = `
       
@@ -123,7 +121,6 @@ const CheckoutPage = () => {
       <ul class="list-group mb-3" id="listItem">
       
       `;
-    
 
     // eslint-disable-next-line prefer-destructuring
     const length = cart.objects.length;
@@ -165,12 +162,10 @@ const CheckoutPage = () => {
       for (let i = 0; i < list.length; i += 1) {
         if (list[i].value === '') {
           bool = true;
-          
           break;
         }
       }
       if (bool === false) {
-        
         PaypalPage();
       } else {
         renderPopUp();

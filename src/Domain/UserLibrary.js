@@ -39,7 +39,6 @@ class UserLibrary {
           },
         };
 
-        ("coucou logi  ")
         const reponse = await fetch(`${process.env.API_BASE_URL}/users/login`, options);
         if (!reponse.ok) {
           renderPopUp();
@@ -64,7 +63,6 @@ class UserLibrary {
         if ((await localStorage.getItem(userOrder)) == null) {
           await createOrder(user.email);
         }
-        (user, 'l user');
         // sets the Authenticated user to the actual user
         await setAuthenticatedUser(user);
 
@@ -204,7 +202,6 @@ class UserLibrary {
             'Content-Type': 'application/json',
           },
         };
-        ('logloglog');
         // const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/becomeSeller`, options);
         const reponse = await fetch(`${process.env.API_BASE_URL}/users/becomeSeller`, options);
 
