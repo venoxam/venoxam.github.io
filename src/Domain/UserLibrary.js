@@ -40,7 +40,7 @@ class UserLibrary {
         };
 
         console.log("coucou logi  ")
-        const reponse = await fetch(`${process.env.API_BASE_URL}/users/login`, options);
+        const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/login`, options);
         if (!reponse.ok) {
           renderPopUp();
           throw new Error(
@@ -153,7 +153,7 @@ class UserLibrary {
           },
         };
 
-        const reponse = await fetch(`${process.env.API_BASE_URL}/users/register`, options);
+        const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/register`, options);
 
         if (!reponse.ok) {
           throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -206,7 +206,7 @@ class UserLibrary {
         };
         console.log('logloglog');
         // const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/becomeSeller`, options);
-        const reponse = await fetch(`${process.env.API_BASE_URL}/users/becomeSeller`, options);
+        const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/becomeSeller`, options);
 
         console.log('logfgfdgfdgdgloglog');
         if (!reponse.ok) {
@@ -251,7 +251,7 @@ class UserLibrary {
           };
           // const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/updateUser`, options);
 
-          const reponse = await fetch(`${process.env.API_BASE_URL}/users/updateUserFirstName`, options);
+          const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/updateUserFirstName`, options);
 
           if (!reponse.ok) {
             throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -309,7 +309,7 @@ class UserLibrary {
           };
           // const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/updateUser`, options);
 
-          const reponse = await fetch(`${process.env.API_BASE_URL}/users/updateUserLastName`, options);
+          const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/updateUserLastName`, options);
 
           if (!reponse.ok) {
             throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -363,7 +363,7 @@ class UserLibrary {
           };
           // const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/updateUserPassword`, options);
 
-          const reponse = await fetch(`${process.env.API_BASE_URL}/users/updateUserPassword`, options);
+          const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/updateUserPassword`, options);
 
           if (!reponse.ok) {
             throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -419,7 +419,7 @@ class UserLibrary {
         // const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/deleteAccount`, options);
 
         // eslint-disable-next-line prefer-template
-        const reponse = await fetch(`${process.env.API_BASE_URL}/users/deleteAccount`, options);
+        const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/deleteAccount`, options);
 
         if (!reponse.ok) {
           throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
@@ -451,7 +451,7 @@ class UserLibrary {
       // eslint-disable-next-line prefer-template
       // const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/getIdStore/` + id, options);
       // eslint-disable-next-line prefer-template
-      const reponse = await fetch(`${process.env.API_BASE_URL}/users/getIdStore/` + id, options);
+      const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/getIdStore/` + id, options);
   
       if (!reponse.ok) {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
