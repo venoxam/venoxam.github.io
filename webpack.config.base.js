@@ -49,7 +49,7 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
 
-      // emits a separate file and exports the URLs => works for import in JS and url in CSS
+      // emits a separate file and exports the URLs => works for import in JS and url in CSS.
       // default condition: a file with size less than 8kb will be treated as a inline
       // module type and resource module type otherwise
       {
