@@ -64,5 +64,4 @@ const StorePage = async () => {
   } // fin else
 }; // fin page
 
-
 export default StorePage;
