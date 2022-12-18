@@ -172,7 +172,7 @@ class ProductLibrary {
     const btnSearch = document.getElementById('searchbtn');
     btnSearch.addEventListener('click', async (e) => {
       e.preventDefault();
-      // Récupération de toute les données avec les id
+      // Récupération de toute les données avec les idb
       const data = document.getElementById('search').value;
 
       if (data === undefined) {
