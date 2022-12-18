@@ -178,7 +178,7 @@ const ProductPage = async () => {
   // montre tt les reviews d'un produit
   const reviewshtml = document.getElementById('Reviews');
   const reviewlist = await ProductLibrary.prototype.getReviews(productId);
-  console.log(reviewlist, 'le review list');
+  
   if (reviewlist.length === 0) {
     reviewshtml.innerHTML += `<p style="font-size:150%;padding:10px" class="text-center">No reviews on this product yet</p>`;
   } else {

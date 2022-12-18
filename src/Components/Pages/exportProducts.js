@@ -131,7 +131,7 @@ async function showProducts(product) {
     shop[j].addEventListener('click', async (e) => {
       e.preventDefault();
       const id = shop[j].name;
-      console.log('ID STORENAME', id);
+      
       // eslint-disable-next-line prefer-template
       clearActive();
       Navigate('/store?=', id);
@@ -145,7 +145,7 @@ async function showProducts(product) {
     cat[j].addEventListener('click', async (e) => {
       e.preventDefault();
       const idcat = cat[j].name;
-      console.log('ID CAT', idcat);
+      
       // eslint-disable-next-line prefer-template
       clearActive();
       Navigate('/category?=', idcat);

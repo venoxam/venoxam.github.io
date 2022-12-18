@@ -78,7 +78,7 @@ class ProductLibrary {
       const selectElement = document.getElementById('categories');
       const idCategory = selectElement.value;
 
-      console.log('les donnees', productname, description, price, color, idUser, idCategory);
+      ;
       console.log(
         'les donnees .value',
         productname.value,
@@ -157,7 +157,7 @@ class ProductLibrary {
     }
 
     const categoryHtml = document.getElementById('categories');
-    console.log(category, 'category name');
+    
     category.forEach((categorie) => {
       const categoryName = categorie.name;
       const categoryId = categorie.id_category;
@@ -186,11 +186,11 @@ class ProductLibrary {
               'Content-Type': 'application/json',
             },
           };
-          console.log(JSON.stringify(data));
+          );
           // eslint-disable-next-line prefer-template
           const results = await fetch(`${process.env.API_BASE_URL}/products/search/` + data, options);
           const products = await results.json();
-          console.log(products);
+          
 
           setSearch(products);
 
@@ -339,7 +339,7 @@ class ProductLibrary {
       shop[j].addEventListener('click', async (e) => {
         e.preventDefault();
         const id = shop[j].name;
-        console.log('ID STORENAME', id);
+        
         // eslint-disable-next-line prefer-template
         clearActive();
         Navigate('/store?=', id);
@@ -353,7 +353,7 @@ class ProductLibrary {
       cat[j].addEventListener('click', async (e) => {
         e.preventDefault();
         const idcat = cat[j].name;
-        console.log('ID CAT', idcat);
+        
         // eslint-disable-next-line prefer-template
         clearActive();
         Navigate('/category?=', idcat);
@@ -415,7 +415,7 @@ class ProductLibrary {
           'Content-Type': 'application/json',
         },
       };
-      console.log('TEST ', id);
+      
       // const reponse = await fetch(`${process.env.API_BASE_URL}/products/getIdProduct/` + id, options);
   
       // eslint-disable-next-line prefer-template
@@ -450,11 +450,11 @@ class ProductLibrary {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
       }
       idReview = await reponse.json();
-      console.log(idReview);
+      
       /*  
-  console.log("id ::::::", idProduct);
+  
   const path =`'../../assets/product/image${idProduct}.img'`;
-  console.log("le path pour nouveau file::",path);
+  
   fs.appendFile(path,image); 
   */
       /* const user = await reponse.json(); */

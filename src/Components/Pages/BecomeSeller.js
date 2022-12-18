@@ -60,15 +60,15 @@ const BecomeSeller = () => {
   // verifie si l'user s'est login pour acceder à cette page
   const user = getAuthenticatedUser();
   if (user === undefined) {
-    console.log('3');
+    
     clearActive();
     Navigate('/login');
   } else {
-    console.log('4');
+    
     clearPage();
     const main = document.querySelector('main');
     main.innerHTML = html;
-    console.log('5');
+    
     
     UserLibrary.prototype.becomeSeller(user);
   }

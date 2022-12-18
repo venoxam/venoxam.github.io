@@ -119,7 +119,7 @@ const HomePage = async () => {
 
 async function showCategories(categories) {
   
-  console.log(categories)
+  
   const category = document.getElementById('categories')
   categories.forEach(element => {
     const categoryName = element.name;
@@ -137,7 +137,7 @@ async function showCategories(categories) {
   const cat = document.getElementsByClassName('categoryName');
   for (let j = 0; j < cat.length; j += 1) {
     cat[j].addEventListener('click', async (e) => {
-      console.log(cat[j].name)
+      
       e.preventDefault();
       const idcat = cat[j].name;
       // eslint-disable-next-line prefer-template

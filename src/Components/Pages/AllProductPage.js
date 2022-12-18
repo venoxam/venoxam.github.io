@@ -32,7 +32,7 @@ const AllProductPage = async () => {
     for (let y = 0; y < btn.length; y += 1) {
       btn[y].addEventListener('click', async (e) => {
         e.preventDefault();
-        console.log(btn[y].value);
+        
         addItemToCart(btn[y].value, 5, 1);
         Navbar();
       });

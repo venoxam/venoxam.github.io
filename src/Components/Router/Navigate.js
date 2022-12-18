@@ -8,7 +8,7 @@
 
 const Navigate = (toUri, id) => {
   if (id !== undefined) {
-    console.log('le id est : ', id);
+    
     // eslint-disable-next-line no-param-reassign
     toUri += id;
   }

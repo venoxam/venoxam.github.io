@@ -39,7 +39,7 @@ class UserLibrary {
           },
         };
 
-        console.log("coucou logi  ")
+        ("coucou logi  ")
         const reponse = await fetch(`${process.env.API_BASE_URL}/users/login`, options);
         if (!reponse.ok) {
           renderPopUp();
@@ -64,7 +64,7 @@ class UserLibrary {
         if ((await localStorage.getItem(userOrder)) == null) {
           await createOrder(user.email);
         }
-        console.log(user, 'l user');
+        (user, 'l user');
         // sets the Authenticated user to the actual user
         await setAuthenticatedUser(user);
 
@@ -204,11 +204,11 @@ class UserLibrary {
             'Content-Type': 'application/json',
           },
         };
-        console.log('logloglog');
+        ('logloglog');
         // const reponse = await fetch(`${process.env.API_BASE_URL}/api/users/becomeSeller`, options);
         const reponse = await fetch(`${process.env.API_BASE_URL}/users/becomeSeller`, options);
 
-        console.log('logfgfdgfdgdgloglog');
+        
         if (!reponse.ok) {
           throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
         }
@@ -440,7 +440,7 @@ class UserLibrary {
 
   async  isSeller(id) {
     let result;
-    console.log('saluuuut', id);
+    
     try {
       const options = {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -457,7 +457,7 @@ class UserLibrary {
         throw new Error(`fetch error : ${reponse.status}${reponse.statusText}`);
       }
       result = await reponse.json();
-      console.log('RESSULT', result);
+      
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error('error: ', err);

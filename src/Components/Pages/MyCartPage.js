@@ -40,12 +40,12 @@ const MyCartPage = () => {
     main.innerHTML = html;
     let html2 = ``;
 
-    console.log('le panier est', cart.objects);
+    
 
   
     const length = cart.objects.length;
     const id = document.getElementById('listItem');
-    console.log('lenght : ', length);
+    
     for (let i = 0; i < length; i += 1) {
       let totalPriceForThisArticle = 0;
       totalPriceForThisArticle = cart.objects[i].price * cart.objects[i].count;
@@ -75,7 +75,7 @@ const MyCartPage = () => {
     
       btnToArticle[y].addEventListener('click', async (e) => {
         e.preventDefault();
-        console.log('Je suis dans le event listener');
+        
         
         Navigate('/product?id_product=', cart.objects[y].id);
       });
@@ -86,7 +86,7 @@ const MyCartPage = () => {
       
       btn[y].addEventListener('click', async (e) => {
         e.preventDefault();
-        console.log('Je suis dans le event listener');
+        
 
         
         removeItemFromCart(cart.objects[y].name);

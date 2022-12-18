@@ -42,7 +42,7 @@ async function SellerPage(user) {
     });
 
     const products = await SellerLibrary.prototype.getAllBySeller(user.userId);
-    console.log(products, 'ici prodcts')
+    
     ProductLibrary.prototype.showProducts(products);
   } 
 

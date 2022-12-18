@@ -40,6 +40,5 @@ const routes = {
   
 };
 
-console.log('routes',routes);
 
 export default routes;
