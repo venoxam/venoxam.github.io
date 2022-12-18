@@ -15,7 +15,6 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          cd frontend
           npm install
           npm run build
       - name: Deploy 🚀
